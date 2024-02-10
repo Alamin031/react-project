@@ -1,0 +1,117 @@
+@use 'fonts';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: white;
+  --dark: #0a1214;
+  --green: #49ca21;
+  --yellow: #ed7e00;
+  --orange: #ff5b35;
+  --pink: #fd4680;
+  --background: #f0f2f5;
+  --magenta: #c345ff;
+  --purple-100: #e9e9ff;
+  --purple-200: #6565fe;
+  --purple-500: #4c12a1;
+  --blue-100: #f0fdff;
+  --blue-200: #e2f8ff;
+  --blue-300: #0aa6e0;
+  --blue-400: #6565fe;
+  --blue-500: #3b82f6;
+  --blue-600: #60a5fa;
+  --gray-100: #f3f8f8;
+  --gray-200: #dae8e7;
+  --gray-300: #8999b0;
+  --gray-400: #5b706f;
+  --gray-500: #6b7280;
+  --gray-600: #1d2432;
+  --gray-700: #667387;
+  --gray-800: #374151;
+  --gray-900: #111827;
+  --red-500: #dc2626;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply min-w-full;
+}
+
+.wrapper-background {
+  background: var(--background);
+}
+
+.bg-gradient-info {
+  background-image: linear-gradient(195deg, #49a3f1, #1a73e8);
+}
+
+.nav-link {
+  color: #455963;
+}
+
+.nav-link:active {
+  background-color: #4d66731a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(194, 189, 203);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(160, 160, 160);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(126, 126, 126);
+}
+td {
+  width: 150px;
+}
+
+/* .drawer: {
+  max-width: 100% !important;
+} */
+.Drawer {
+  /* @apply w-[600px] !important; */
+  /* width: 800px !important; */
+  background: var(--background);
+  /* fontsize: 1.5rem; */
+  /* font: 400 1.5rem/2rem var(--font-sans); */
+
+
+}
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 1000px) {
+  .table-container {
+    max-width:10px;
+    min-width: 100%; 
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    white-space: nowrap;
+  }
+}
+

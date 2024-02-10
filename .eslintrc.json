@@ -1,0 +1,63 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "airbnb",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "@typescript-eslint", "import"],
+  "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "no-console": "error",
+    "@next/next/no-img-element": "off",
+    "no-bitwise": [2, { "allow": ["^", "&"] }],
+    "func-names": "off",
+    "prefer-arrow-callback": "off",
+    "no-plusplus": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsFor": ["state"] }
+    ],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+  },
+  "overrides": [
+    {
+      "files": ["*.{ts,tsx}"],
+      "rules": {
+        "no-undef": "off",
+        "react/button-has-type": "off"
+      }
+    }
+  ]
+}
